@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&family=Chela+One&display=swap');
+/* >>>>>>>>>>>>>>>>>>> Reset <<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>>> Reset <<<<<<<<<<<<<<<<< */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* >>>>>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<<< */
+
+
+body {
+      max-width: 1850px;
+}
+
+p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+p, h2, h3, a {
+    font-family: 'BenchNine', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 62.5% 37.5%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "fc sd"
+      "art art";
+    margin: 0 auto;
+}
+
+
+/* >>>>>>>>>>>>>>>>> Header <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>> Header <<<<<<<<<<<<<<<< */
+.bandeau{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: #527bea;
+    font-size: 4em;
+    font-family: 'Chela One', system-ui;
+
+}
+
+.main-nav{
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ae2123;
+}
+
+nav li {
+    display: inline;
+}
+
+ nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    font-size: 1.5em;
+}
+a {
+    text-decoration: none;
+    color: red;
+    font-size: 1.5em;
+}
+a:hover {
+    color: #999;
+}
+
+.search-bar{
+    padding: 1em;
+}
+
+/* >>>>>>>>>>>>>>> Main <<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>> Main <<<<<<<<<<<<<<<<<< */
+article{
+    margin: 1em;
+    padding: 0.5em;
+    border:1px solid  #999;
+    box-shadow: 5px 5px 5px  #999;
+}
+h2 {
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 2em;
+    background-color: #ae2123;
+    color: white;
+    line-height: 1.5;
+    max-width: 3em;
+    text-align: center;
+}
+h3 {
+    font-size: 2em;
+    margin-top: 1em;
+}
+/* >>>>>>>>>>>>>>> col-5 <<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>> col-5 <<<<<<<<<<<<<<<<<< */
+.col-5 {
+    grid-area: fc;
+}
+.col-5 img{
+    width: 100%;
+}
+.boutton {
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+#res , #com{
+    background-color: #527bea;
+    padding: 1em;
+    font-size: 1.5em;
+    border-radius: 2em;
+    border: #527bea;
+}
+#res:hover, #com:hover {
+    background-color: #BAF1CB;
+    color: #999;
+}
+/* >>>>>>>>>>>>>>> col-3 <<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>> col-3 <<<<<<<<<<<<<<<<<< */
+.col-3 {
+    grid-area: sd;
+}
+.col-3 img{
+    width: 100%;
+}
+table{
+    margin: 0.5em 0.5em;
+    width: 95%;
+    font-family: 'Chela One', system-ui;
+    font-size: 1.5em;
+}
+th{
+    color: white;
+    padding: 0.5em 1em;
+    background-color: #527bea;
+}
+tr, td{
+    padding: 0.5em 0.5em;
+    text-align: center;
+}
+tr:nth-child(2n){
+    background-color: #858585;
+    color: white;
+}
+.image-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+#img-pf {
+    width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
+    display: block;
+}
+.fond {
+    position: absolute;
+    top :50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+}
+
+#text-pf {
+    position: absolute;
+    top :50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(174, 33, 35, 1);
+    color: white;
+    padding: 0.5em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none; 
+}
+
+.image-container:hover .fond, .image-container:hover .fond #text-pf {
+    opacity: 1; /* Faire apparaître le lien lors du survol */
+}
+#text-pf:hover{
+    background-color: #858585;
+}
+
+/* >>>>>>>>>>>>>>> col-8 <<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>> col-8 <<<<<<<<<<<<<<<<<< */
+.col-8 {
+    grid-area: art;
+}
+.col-8 h2 {
+    max-width: 5em;
+}
+.col-8-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.col-8-1{
+    margin: 0.5em;
+}
+.col-8-1 img{
+    width: 100%;
+}
+/* >>>>>>>>>>>>>>> Footer <<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>> Footer <<<<<<<<<<<<<<<<<< */
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto; /* Trois colonnes égales et une colonne pour le logo */
+    background-color: #ededed;
+    padding: 0.5em;
+}
+
+.liens {
+    display: flex;
+    flex-direction: column;
+}
+
+.liens a {
+    padding: 0.5em;
+    color: black;
+}
+
+#logo{
+    grid-column: 4;
+}
+
+
+
+/* >>>>>>>>>>>>>>> Media <<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>> Media <<<<<<<<<<<<<<<<<< */
+@media only screen and (max-width: 940px) {
+    body {
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+    .bandeau{
+        flex-direction: column;
+        margin: 1.5em;
+        line-height: 4em;
+    }
+    .main-nav{
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav li {
+        display: block;
+        padding: 0.5em;
+    }
+    main {
+        margin: 0 auto;
+        grid-template-columns: 100%; 
+        grid-template-areas: 
+        "fc"
+        "sd"
+        "art";
+    }
+    .boutton {
+        padding: 1.5em;
+        flex-direction: column;
+        align-items: center;
+    }
+    #res , #com{
+        margin: 1em;
+    }
+    table{
+        width: 95%;
+        margin: 0.5em 0.5em;
+    };
+    th, tr, td {
+        padding :0.5em 0.5em;
+    }
+    .col-8-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .col-8-1{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .col-8-1 img{
+        width : 100%;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+   
+    .liens{
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    footer #logo {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+    }
+    .liens a {
+        padding: 0.25em;
+    }
+}
